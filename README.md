@@ -1,4 +1,4 @@
-# Adding Google Analytics to GH pages with the minimal theme 
+# Adding Google Analytics to GH pages with the [`minimal` theme]( 
 
 ## Adding GA to your site 
 Find the `_config.yml` file in your repo - it should be in the same directory as the `README.md` file being parsed into HTLM. Add the `google_analytics` key to it:
@@ -9,7 +9,7 @@ google_analytics: UA—XXXXXXXX-X
 ```
 
 1. Use your own key (rather than the X stubs). 
-2. The `theme` should be `jekyll-theme-minimal`. It might work with other themes, but I have not tested it.
+2. The `theme` should be `jekyll-theme-minimal`. It will probably work [with other themes](https://github.com/pages-themes), but I have not tested it.
 
 ## Testing
 Reload the site. You might need to [force-refresh your cache](http://refreshyourcache.com/en/cache/), and it might take a minute for the changes to propogate. View the site source and make sure the analytics function appears at the bottom of the `<body`> part. 

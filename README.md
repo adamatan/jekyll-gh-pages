@@ -1,6 +1,10 @@
 ## Welcome to GitHub Pages
 
-ADAM-HEAD
+```
+commit 2a29cbaa7dd6295f42b4e035a3c71727bf469aaf (HEAD -> master, origin/master, origin/HEAD)
+Author: Adam Matan <adam@matan.name>
+Date:   Mon Nov 6 22:53:48 2017 +0200
+```
 You can use the [editor on GitHub](https://github.com/adamatan/jekyll-gh-pages/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.

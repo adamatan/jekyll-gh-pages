@@ -1,42 +1,18 @@
-## Welcome to GitHub Pages
+# Adding Google Analytics to GH pages with the minimal theme 
+
+## Adding GA to your site 
+Find the `_config.yml` file in your repo - it should be in the same directory as the `README.md` file being parsed into HTLM. Add the `google_analytics` key to it:
 
 ```
-commit 2a29cbaa7dd6295f42b4e035a3c71727bf469aaf (HEAD -> master, origin/master, origin/HEAD)
-Author: Adam Matan <adam@matan.name>
-Date:   Mon Nov 6 22:53:48 2017 +0200
-```
-You can use the [editor on GitHub](https://github.com/adamatan/jekyll-gh-pages/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+theme: jekyll-theme-minimal
+google_analytics: UA—XXXXXXXX-X
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+1. Use your own key (rather than the X stubs). 
+2. The `theme` should be `jekyll-theme-minimal`. It might work with other themes, but I have not tested it.
 
-### Jekyll Themes
+## Testing
+Reload the site. You might need to [force-refresh your cache](http://refreshyourcache.com/en/cache/), and it might take a minute for the changes to propogate. View the site source and make sure the analytics function appears at the bottom of the `<body`> part. 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/adamatan/jekyll-gh-pages/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Why isn't my code in the `<head>`? 
+That's how GH pages works. You can't [tweak HTML manually](https://desiredpersona.com/google-analytics-jekyll/), just change `README.md` files and `_config.yml`s. They chose to place the code in the bottom of the `<body>` part rather than in the `<head>`. It [should not change much](https://stackoverflow.com/a/3173593/51197), unless the user closes the page before it finished loading.
